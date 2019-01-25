@@ -1,0 +1,36 @@
+extends templates/base
+
+block page
+	.hero.is-dark.is-fullheight
+		.hero-body
+			.container.content
+				.title.has-text-centered
+					<svg class="logo centered is-light pushed-horizontal is-large is-smoother" viewBox="0 0 210 206" version="1.1">
+					<path d="M0,73l4,0l54,123.152l-4,3.848l-50,0l-4,-3.848l0,-123.152Z"/>
+					<path d="M0,31.22l0,-24.712l7.204,-6.508l39.221,0l81.575,196.098l-4,3.902l-54.589,-0.122l-69.411,-168.658Z"/>
+					<path d="M71,31.22l0,-24.712l7.204,-6.508l39.221,0l80.575,196.098l-4,3.902l-53.589,-0.122l-69.411,-168.658Z"/>
+					</svg> 
+					span Mike Veldsink
+				
+				.section.level
+					.title I am looking for a
+						input.input-landing(placeholder="programmer")#landing-search-bar
+					.level.content
+						a.is-smooth.is-button.pushed-horizontal(href="mailto:velddev@gmail.com")
+							i.fas.fa-envelope.fa-2x
+						a.is-smooth.is-button.pushed-horizontal(href="https://github.com/velddev") #[i.fab.fa-github.fa-2x]
+						a.is-smooth.is-button.pushed-horizontal(href="https://dribbble.com/veld") #[i.fab.fa-dribbble.fa-2x]
+						a.is-smooth.is-button.pushed-horizontal(href="https://www.linkedin.com/in/velddev/") #[i.fab.fa-linkedin.fa-2x]
+						
+				.content#landing-content
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-desktop] Backend Programmer
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-desktop] Frontend Programmer
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-gamepad] Game Programmer
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-desktop] Lead Programmer
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-pencil] Logo Designer
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-chart-bar] Project Manager
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-language] Translator
+					//- .button.pushed.is-rounded.is-outlined.is-white.is-smooth #[i.fas.fa-pencil] UI Designer
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js")
+	script
+		include ../js/home.js
