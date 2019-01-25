@@ -47,6 +47,7 @@ body {
 	font-size: 1.75rem;
 	color: white;
 	font-weight: bold;
+	margin-left: $gap;
 
 	@media screen and (max-width: 768px) {
 		width: 100%;
