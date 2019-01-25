@@ -1,6 +1,4 @@
-# Miki.Web.Frontend
-The official repository for Miki.ai's frontend code. Collaborate and post issues here related to the current website version.
-
+# Portfolio
 ## Running with just parcel
 Standard dev mode with built-in parcel webserver
 
