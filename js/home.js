@@ -59,7 +59,7 @@ window.onmousewheel = checkUserScroll;
 
 function lerp(from, to, t)
 {
-    return from + (to - from) * t;
+    return (1-t) * from + to * t;
 }
 
 function scrollPage(pageId, speed = 0.01) {
