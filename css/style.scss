@@ -17,8 +17,8 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('../img/background.jpg') !important;
-	background-blend-mode: multiply;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/background.jpg') !important;
+	
 }
 
 .is-rounded {

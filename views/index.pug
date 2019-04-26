@@ -7,7 +7,7 @@ mixin project(context)
 				.columns
 					- if(context.icon != null)
 						.column.is-3
-							image.image.is-rounded(src=context.icon)
+							img.image.is-rounded(src=context.icon)
 					.column
 						.title #{context.name.toUpperCase()} #[.subtitle #{context.subtitle}]
 						i #{`${context.role}, ${context.timeStarted} - ${context.timeEnded || "ongoing"}`}
@@ -27,7 +27,7 @@ block page
 	.modal#modalBase
 		.modal-background(onclick="closeModal()")
 		.modal-content
-			img(src="http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg")#modalImg
+			img#modalImg
 		button.modal-close.is-large(aria-label="close" onclick="closeModal()")
 	.hero.is-dark.is-fullheight#frontpage
 		.hero-body

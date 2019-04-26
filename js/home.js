@@ -43,8 +43,37 @@ var skills = [
     },
 ]
 
-function scrollPage(pageId) {
-    window.scrollX = window.innerHeight * pageId;
+let currentAnimationState = null;
+const checkUserScroll = (s, ev) => {
+    if(currentAnimationState != null)
+    {
+        clearInterval(currentAnimationState);
+        currentAnimationState = null;
+    }
+}
+
+if(window.addEventListener) {
+    document.addEventListener('DOMMouseScroll', checkUserScroll, false); 
+}
+window.onmousewheel = checkUserScroll;
+
+function lerp(from, to, t)
+{
+    return from + (to - from) * t;
+}
+
+function scrollPage(pageId, speed = 0.01) {
+    current = 0.0;
+    
+    currentAnimationState = setInterval(() => {
+        window.scrollTo(0, lerp(window.scrollY, pageId * window.innerHeight + 1, current));
+        current += speed;
+        if(current > 1)
+        {
+            clearInterval(currentAnimationState);
+            currentAnimationState = null;
+        }
+    }, 16);
 }
 
 function closeModal() {
@@ -82,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
             d.appendChild(icon);
         }
 
-        d.append(skills[i].title);
+        d.innerHTML += skills[i].title;
 
         contentDiv.appendChild(d);
     }
