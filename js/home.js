@@ -43,6 +43,21 @@ var skills = [
     },
 ]
 
+function scrollPage(pageId) {
+    window.scrollX = window.innerHeight * pageId;
+}
+
+function closeModal() {
+    document.getElementById("modalBase")
+        .classList.remove("is-active");
+}
+
+function showModal(imageUrl) {
+    document.getElementById("modalImg")
+        .setAttribute("src", imageUrl);
+    document.getElementById("modalBase")
+        .classList.toggle("is-active");
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     let contentDiv = document.getElementById("landing-content");
