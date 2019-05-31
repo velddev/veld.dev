@@ -44,7 +44,7 @@ var skills = [
 ]
 
 let currentAnimationState = null;
-const checkUserScroll = (s, ev) => {
+const checkUserScroll = (ev) => {
     if(currentAnimationState != null)
     {
         clearInterval(currentAnimationState);
@@ -62,8 +62,8 @@ function lerp(from, to, t)
     return (1-t) * from + to * t;
 }
 
-function scrollPage(pageId, speed = 0.01) {
-    current = 0.0;
+export function scrollPage(pageId, speed = 0.01) {
+    let current = 0.0;
     
     currentAnimationState = setInterval(() => {
         window.scrollTo(0, lerp(window.scrollY, pageId * window.innerHeight + 1, current));
@@ -76,12 +76,12 @@ function scrollPage(pageId, speed = 0.01) {
     }, 16);
 }
 
-function closeModal() {
+export function closeModal() {
     document.getElementById("modalBase")
         .classList.remove("is-active");
 }
 
-function showModal(imageUrl) {
+export function showModal(imageUrl) {
     document.getElementById("modalImg")
         .setAttribute("src", imageUrl);
     document.getElementById("modalBase")

@@ -24,6 +24,8 @@ mixin project(context)
 					.column
 						img.is-filled-up(src=i onclick=`showModal("${i}")`)
 block page
+	script
+		include ../js/home.js
 	.modal#modalBase
 		.modal-background(onclick="closeModal()")
 		.modal-content
@@ -153,6 +155,3 @@ block page
 							{ url: "https://store.steampowered.com/app/746860/Rail_Recon/", icon: "fab fa-steam"},
 						]
 					})
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js")
-	script
-		include ../js/home.js
