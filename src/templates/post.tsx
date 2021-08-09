@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data;
 
   return (
-    <>
+    <Layout>
       <VStack
         as="article"
         itemScope
@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </li>
         </ul>
       </nav>
-    </>
+    </Layout>
   );
 };
 

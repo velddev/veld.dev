@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { ChakraProvider, ColorModeScript, CSSReset } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import NavBar from "./NavBar";
 import theme from "../theme";
@@ -12,7 +12,6 @@ type Props = {
 
 const Layout = ({ children, location }: PropsWithChildren<Props>) => (
   <ChakraProvider theme={theme}>
-    <CSSReset />
     <Helmet>
       <title>veld.dev</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +25,10 @@ const Layout = ({ children, location }: PropsWithChildren<Props>) => (
         rel="stylesheet"
       />
     </Helmet>
-    <NavBar location={location} />
-    <Container>{children}</Container>
+    <Container>
+      <NavBar location={location} />
+      {children}
+    </Container>
   </ChakraProvider>
 );
 
