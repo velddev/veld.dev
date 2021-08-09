@@ -32,28 +32,40 @@ const IndexPage = ({ data }) => {
           >
             <ProjectItem
               title="Top.gg"
-              role="Chief Technical Officer"
+              role={{
+                full: "Chief Technical Officer",
+                short: "CTO",
+              }}
               iconSquare="/images/topgg.png"
               href="https://top.gg"
               description="Together with a team, we redefined what Top.gg was in a year."
             />
             <ProjectItem
               title="Veld Chat"
-              role="Solo project"
+              role={{
+                full: "Solo project",
+                short: "Solo",
+              }}
               iconSquare="/images/veld-chat.png"
               href="https://veld.chat"
               description="I love cloning apps, and with that I built a chat app that feels like Discord."
             />
             <ProjectItem
               title="Uber"
-              role="Fullstack Engineer"
+              role={{
+                full: "Fullstack Engineer",
+                short: "Fullstack Eng",
+              }}
               iconSquare="/images/uber.png"
               href="https://uber.com"
               description="on the Uber Pay team, we onboarded 12 new ways to pay in LATAM, US, and EU."
             />
             <ProjectItem
               title="Miki"
-              role="Solo Project"
+              role={{
+                full: "Solo project",
+                short: "Solo",
+              }}
               iconSquare="/images/miki.png"
               href="https://miki.bot"
               description="One of the largest Discord bots in 2016. Over 250.000 servers use it."
