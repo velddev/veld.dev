@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Img, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import Container from "./Container";
 
@@ -16,7 +16,10 @@ const NavBar = ({ location }: Props) => (
   >
     <Flex justify="space-between">
       <Link href="/">
-        <Heading fontSize="2xl">{location ? "Veld" : "Portfolio"}</Heading>
+        <HStack align="center" spacing="4">
+          <Img src="/logo.svg" w="10" />
+          <Heading size="lg">Veld</Heading>
+        </HStack>
       </Link>
       <HStack spacing="8">
         <Link href="/">Home</Link>

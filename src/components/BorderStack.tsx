@@ -10,6 +10,7 @@ const BorderStack = ({ children, ...rest }: Props) => (
     p="4"
     borderRadius="lg"
     borderColor="whiteAlpha.400"
+    transition="all 0.2s"
     _hover={{
       borderColor: "whiteAlpha.600",
       bg: "whiteAlpha.100",
